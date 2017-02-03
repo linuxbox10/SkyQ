@@ -2323,137 +2323,6 @@
     <widget name="Volume" pixmap="SkyQ/Backgrounds/vol.png" position="40,4" size="344,27" zPosition="2" transparent="1" alphatest="blend" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-  <widget name="list" position="333,235" size="315,480" scrollbarMode="showNever" colorServiceDescription="un5884ab" colorServiceDescriptionSelected="white" selectionPixmap="SkyQ/SelectBars/channelselecta1.png" picServiceEventProgressbar="SkyQ/ProgressBars/minibar.png" backgroundColor="bluekey" foregroundColorSelected="white" backgroundColorSelected="bluekey" foregroundColorMarked="white" backgroundColorMarked="bluekey" foregroundColorMarkedSelected="red" backgroundColorMarkedSelected="bluekey" foregroundColorServiceNotAvail="grey" foregroundColorEvent="white" foregroundColorEventSelected="skyyellow" colorEventProgressbar="un5884ab" colorEventProgressbarSelected="un5884ab" colorEventProgressbarBorder="white" colorEventProgressbarBorderSelected="white" colorServiceRecorded="red" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;22" serviceInfoFont="Regular;22" EventFontSingle="Regular;22" EventFontMulti="Regular;22" progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" transparent="1" zPosition="2" />
-  <widget source="ServiceEvent" render="Label" position="665,313" size="447,31" font="Bold; 28" halign="left" backgroundColor="skyblue" transparent="1" foregroundColor="white" zPosition="3">
-    <convert type="ServiceName">Name</convert>
-  </widget>
-  <ePixmap name="Multi" position="0,center" size="1280,720" pixmap="SkyQ/Backgrounds/full.png" zPosition="-25" />
-  <widget source="ServiceEvent" render="Label" position="833,344" size="440,28" font="Regular; 24" halign="left" backgroundColor="skyblue" transparent="1" foregroundColor="skyyellow" zPosition="3">
-    <convert type="EventName">Name</convert>
-  </widget>
-  <widget source="Event" render="Label" position="665,344" size="100,28" font="Regular; 24" backgroundColor="skyblue" halign="left" transparent="1" foregroundColor="skyyellow" zPosition="3">
-    <convert type="EventTime">StartTime</convert>
-    <convert type="ClockToText" />
-  </widget>
-  <widget source="Event" render="Label" position="733,344" size="100,28" font="Regular; 24" halign="left" backgroundColor="skyblue" transparent="1" foregroundColor="skyyellow" zPosition="3">
-    <convert type="EventTime">EndTime</convert>
-    <convert type="ClockToText">Format:- %H:%M</convert>
-  </widget>
-  <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=3000,wrap" position="665,500" size="608,100" font="Regular; 22" halign="left" backgroundColor="skybluedark" transparent="1" foregroundColor="white" valign="top" zPosition="3">
-    <convert type="SkyEventName">NextDescription</convert>
-  </widget>
-  <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=3000,wrap" position="665,372" size="608,100" font="Regular; 22" halign="left" backgroundColor="skybluedark" transparent="1" foregroundColor="white" valign="top" zPosition="3">
-    <convert type="SkyEventName">ExtendedDescription</convert>
-  </widget>
-  <ePixmap pixmap="SkyQ/icons/red.png" position="665,688" size="24,24" alphatest="blend" />
-  <ePixmap pixmap="SkyQ/icons/green.png" position="767,688" size="24,24" alphatest="blend" />
-  <ePixmap pixmap="SkyQ/icons/yellow.png" position="921,688" size="24,24" alphatest="blend" />
-  <ePixmap pixmap="SkyQ/icons/blue.png" position="1068,688" size="24,24" alphatest="blend" />
-  <widget name="key_red" position="692,686" size="70,30" zPosition="1" font="Regular; 24" halign="left" foregroundColor="un5884ab" backgroundColor="skybluedark" transparent="1" />
-  <widget name="key_green" position="795,685" size="120,30" zPosition="1" font="Regular; 24" halign="left" foregroundColor="un5884ab" backgroundColor="skybluedark" transparent="1" />
-  <widget name="key_yellow" position="948,685" size="115,30" zPosition="1" font="Regular; 24" halign="left" foregroundColor="un5884ab" backgroundColor="skybluedark" transparent="1" />
-  <widget name="key_blue" position="1095,685" size="125,30" zPosition="1" font="Regular; 24" halign="left" foregroundColor="un5884ab" backgroundColor="skybluedark" transparent="1" />
-  <ePixmap position="1224,688" size="50,24" pixmap="SkyQ/icons/key_menu.png" alphatest="blend" />
-  <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=left,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="665,472" size="608,28" font="Regular; 24" zPosition="5" noWrap="1" transparent="1" backgroundColor="skybluedark" foregroundColor="skyyellow">
-    <convert type="d2NextEvents">Event1,noDuration</convert>
-  </widget>
-  <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=left,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="665,600" size="608,28" font="Regular; 24" zPosition="5" noWrap="1" transparent="1" backgroundColor="skybluedark" foregroundColor="skyyellow">
-    <convert type="d2NextEvents">Event2,noDuration</convert>
-  </widget>
-  <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=left,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="665,627" size="608,28" font="Regular; 24" zPosition="5" noWrap="1" transparent="1" backgroundColor="skybluedark" foregroundColor="skyyellow">
-    <convert type="d2NextEvents">Event3,noDuration</convert>
-  </widget>
-  <widget backgroundColor="un5884ab" font="Regular; 25" halign="center" position="42,670" render="Label" size="256,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="white">
-    <convert type="SkyClockToText">SkyQDate</convert>
-  </widget>
-  <widget source="Service" render="Picon" position="1173,253" size="100,60" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="3">
-    <convert type="ServiceName">Reference</convert>
-  </widget>
-  <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=left,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="665,654" size="608,28" font="Regular; 24" zPosition="5" noWrap="1" transparent="1" backgroundColor="skybluedark" foregroundColor="un5884ab">
-    <convert type="d2NextEvents">PrimeTime,noDuration</convert>
-  </widget>
-  <widget alphatest="blend" position="665,152" size="278,158" render="SkyPicon" source="session.CurrentService" transparent="1" zPosition="5">
-  <convert type="ServiceName">Reference</convert>
-  </widget>
-  <widget source="session.VideoPicture" render="Pig" position="0,271" size="319,180" zPosition="3" backgroundColor="transparent" />
-  <widget source="Title" render="SkyRunningText" options="movetype=running,startpoint=0,direction=right,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="-10,228" size="318,36" zPosition="3" font="Bold; 26" backgroundColor="skyblue" halign="right" transparent="1" foregroundColor="white" />
-  <ePixmap pixmap="SkyQ/Backgrounds/cs.png" position="380,0" size="900,506" alphatest="blend" zPosition="-2" name="Fade" />
-  <ePixmap pixmap="SkyQ/Backgrounds/v-bar.png" position="652,0" size="8,720" alphatest="blend" zPosition="5" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,264" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,294" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,324" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,354" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,384" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,414" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,444" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,474" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,504" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="330,534" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,564" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,594" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,624" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,654" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,684" size="315,2" />
-  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="333,714" size="315,2" />
-  <ePixmap pixmap="SkyQ/Toppicks/toppicks1.png" position="435,0" size="845,475" alphatest="blend" zPosition="-3" name="Toppick" />
-  <widget pixmap="SkyQ/icons/ico_dolby_on.png" position="1148,318" size="30,25" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-    <convert type="ServiceInfo">IsMultichannel</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget pixmap="SkyQ/icons/ico_format_on.png" position="1208,318" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-    <convert type="ServiceInfo">IsWidescreen</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget pixmap="SkyQ/icons/ico_format_off.png" position="1208,318" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-    <convert type="ServiceInfo">IsWidescreen</convert>
-    <convert type="ConditionalShowHide">Invert</convert>
-  </widget>
-  <widget pixmap="SkyQ/icons/ico_txt_on.png" position="1183,318" size="20,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-    <convert type="ServiceInfo">SubtitlesAvailable</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget pixmap="SkyQ/icons/ico_hd_on.png" position="1243,318" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-    <convert type="ServiceInfo">IsHD</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget pixmap="SkyQ/icons/ico_sd_on.png" position="1243,318" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-    <convert type="ServiceInfo">IsHD</convert>
-    <convert type="ConditionalShowHide">Invert</convert>
-  </widget>
-  <widget alphatest="blend" render="Pixmap" pixmap="SkyQ/icons/REC.png" position="1117,318" size="26,26" source="session.RecordState" zPosition="3">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
-  <ePixmap pixmap="SkyQ/Backgrounds/toppick.png" position="661,148" size="286,166" alphatest="blend" zPosition="4" name="Fade" />
-  <eLabel name="new eLabel" position="27,68" size="274,59" backgroundColor="skyblue" foregroundColor="white" text="TV Guide" font="Regular; 45" transparent="1" halign="right" />
-</screen>
-  <screen name="ChannelContextMenu" position="0,0" size="1280,720" title="Channellist menu" flags="wfNoBorder">
-    <eLabel text="Channel List Menu" position="345,229" size="230,31" zPosition="1" halign="left" font="Regular; 22" transparent="1" backgroundColor="background" foregroundColor="white" />
-    <widget name="menu" position="606,220" size="660,390" font="Regular; 22" selectionPixmap="SkyQ/SelectBars/menuselect30.png" scrollbarMode="showNever" itemHeight="30" transparent="1" zPosition="1" />
-    <ePixmap name="Multi" position="0,0" size="1280,720" pixmap="SkyQ/Backgrounds/full.png" zPosition="-25" />
-    <widget backgroundColor="un5884ab" font="Regular; 25" halign="center" position="42,670" render="Label" size="256,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="white">
-      <convert type="SkyClockToText">SkyQDate</convert>
-    </widget>
-    <ePixmap pixmap="SkyQ/Backgrounds/v-bar.png" position="586,center" size="12,720" alphatest="blend" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/SelectBars/menuselect.png" position="335,220" size="252,50" />
-    <widget source="session.VideoPicture" render="Pig" position="0,271" size="319,180" zPosition="3" backgroundColor="transparent" />
-    <eLabel text="Channel List" position="12,228" size="296,36" font="Bold; 26" backgroundColor="bluekey" halign="right" transparent="1" />
-    <eLabel name="new eLabel" position="27,68" size="274,59" backgroundColor="skyblue" foregroundColor="white" text="Settings" font="Regular; 45" transparent="1" halign="right" />
-    <eLabel name="new eLabel" position="29,70" size="274,59" backgroundColor="skyblue" foregroundColor="un444444" text="Settings" font="Regular; 45" transparent="1" halign="right" zPosition="-1" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,249" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,279" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,309" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,339" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,369" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,399" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,429" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,459" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,489" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,519" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,549" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,579" size="660,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,609" size="660,2" />
-  </screen>
-  <screen flags="wfNoBorder" name="ChannelSelectionRadio" position="0,0" size="1280,500" title="Channel Selection" backgroundColor="skyblue">
     <widget name="list" position="337,181" size="493,480" scrollbarMode="showNever" colorServiceDescription="un5884ab" colorServiceDescriptionSelected="white" selectionPixmap="SkyQ/SelectBars/channelselect.png" picServiceEventProgressbar="SkyQ/ProgressBars/minibar.png" backgroundColor="bluekey" foregroundColorSelected="white" backgroundColorSelected="bluekey" foregroundColorMarked="white" backgroundColorMarked="bluekey" foregroundColorMarkedSelected="red" backgroundColorMarkedSelected="bluekey" foregroundColorServiceNotAvail="grey" foregroundColorEvent="white" foregroundColorEventSelected="skyyellow" colorEventProgressbar="un5884ab" colorEventProgressbarSelected="un5884ab" colorEventProgressbarBorder="white" colorEventProgressbarBorderSelected="white" colorServiceRecorded="red" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;22" serviceInfoFont="Regular;22" EventFontSingle="Regular;22" EventFontMulti="Regular;22" progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" transparent="1" zPosition="2" />
     <widget source="ServiceEvent" render="Label" position="367,5" size="614,31" font="Regular; 26" halign="left" backgroundColor="skyblue" transparent="1" foregroundColor="white">
       <convert type="ServiceName">Name</convert>
@@ -2463,10 +2332,10 @@
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="Event" render="Label" position="1015,113" size="224,26" halign="left" valign="center" foregroundColor="white" backgroundColor="skyblue" font="Regular;23" transparent="1" zPosition="3">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="SkyClockToText">SkyQStartTime</convert>
-    </widget>
-    <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=3000,wrap" position="367,67" size="614,110" font="Regular; 22" halign="left" backgroundColor="skyblue" transparent="1" foregroundColor="white" valign="top">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="SkyClockToText">SkyQStartTime</convert>
+  </widget>
+   <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=3000,wrap" position="367,67" size="614,110" font="Regular; 22" halign="left" backgroundColor="skyblue" transparent="1" foregroundColor="white" valign="top">
       <convert type="SkyEventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="SkyQ/icons/red.png" position="335,678" size="24,24" alphatest="blend" />
@@ -2529,33 +2398,168 @@
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget source="Event" render="Label" position="1015,86" size="224,26" halign="left" valign="center" foregroundColor="white" backgroundColor="skyblue" font="Regular;23" transparent="1" zPosition="3">
-      <convert type="EventTime">Duration</convert>
-      <convert type="SkyClockToText">SkyAsLength</convert>
-    </widget>
+    <convert type="EventTime">Duration</convert>
+    <convert type="SkyClockToText">SkyAsLength</convert>
+  </widget>
     <widget pixmap="SkyQ/icons/ico_dolby_on.png" position="1194,90" size="30,25" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsMultichannel</convert>
-      <convert type="ConditionalShowHide" />
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_format_on.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_format_off.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide">Invert</convert>
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_txt_on.png" position="1171,90" size="20,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_hd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_sd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide">Invert</convert>
+  </widget>
+    <widget alphatest="blend" render="Pixmap" pixmap="SkyQ/icons/REC.png" position="1015,138" size="26,26" source="session.RecordState" zPosition="2">
+      <convert type="ConditionalShowHide">Blink</convert>
     </widget>
-    <widget pixmap="SkyQ/icons/ico_format_on.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide" />
+    <eLabel name="new eLabel" position="27,68" size="274,59" backgroundColor="skyblue" foregroundColor="white" text="TV Guide" font="Regular; 45" transparent="1" halign="right" />
+  </screen>
+  <screen name="ChannelContextMenu" position="0,0" size="1280,720" title="Channellist menu" flags="wfNoBorder">
+    <eLabel text="Channel List Menu" position="345,229" size="230,31" zPosition="1" halign="left" font="Regular; 22" transparent="1" backgroundColor="background" foregroundColor="white" />
+    <widget name="menu" position="606,220" size="660,390" font="Regular; 22" selectionPixmap="SkyQ/SelectBars/menuselect30.png" scrollbarMode="showNever" itemHeight="30" transparent="1" zPosition="1" />
+    <ePixmap name="Multi" position="0,0" size="1280,720" pixmap="SkyQ/Backgrounds/full.png" zPosition="-25" />
+    <widget backgroundColor="un5884ab" font="Regular; 25" halign="center" position="42,670" render="Label" size="256,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="white">
+      <convert type="SkyClockToText">SkyQDate</convert>
     </widget>
-    <widget pixmap="SkyQ/icons/ico_format_off.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide">Invert</convert>
+    <ePixmap pixmap="SkyQ/Backgrounds/v-bar.png" position="586,center" size="12,720" alphatest="blend" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/SelectBars/menuselect.png" position="335,220" size="252,50" />
+    <widget source="session.VideoPicture" render="Pig" position="0,271" size="319,180" zPosition="3" backgroundColor="transparent" />
+    <eLabel text="Channel List" position="12,228" size="296,36" font="Bold; 26" backgroundColor="bluekey" halign="right" transparent="1" />
+    <eLabel name="new eLabel" position="27,68" size="274,59" backgroundColor="skyblue" foregroundColor="white" text="Settings" font="Regular; 45" transparent="1" halign="right" />
+    <eLabel name="new eLabel" position="29,70" size="274,59" backgroundColor="skyblue" foregroundColor="un444444" text="Settings" font="Regular; 45" transparent="1" halign="right" zPosition="-1" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,249" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,279" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,309" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,339" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,369" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,399" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,429" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,459" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,489" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,519" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,549" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,579" size="660,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,609" size="660,2" />
+  </screen>
+  <screen flags="wfNoBorder" name="ChannelSelectionRadio" position="0,0" size="1280,500" title="Channel Selection" backgroundColor="skyblue">
+  <widget name="list" position="337,181" size="493,480" scrollbarMode="showNever" colorServiceDescription="un5884ab" colorServiceDescriptionSelected="white" selectionPixmap="SkyQ/SelectBars/channelselect.png" picServiceEventProgressbar="SkyQ/ProgressBars/minibar.png" backgroundColor="bluekey" foregroundColorSelected="white" backgroundColorSelected="bluekey" foregroundColorMarked="white" backgroundColorMarked="bluekey" foregroundColorMarkedSelected="red" backgroundColorMarkedSelected="bluekey" foregroundColorServiceNotAvail="grey" foregroundColorEvent="white" foregroundColorEventSelected="skyyellow" colorEventProgressbar="un5884ab" colorEventProgressbarSelected="un5884ab" colorEventProgressbarBorder="white" colorEventProgressbarBorderSelected="white" colorServiceRecorded="red" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;22" serviceInfoFont="Regular;22" EventFontSingle="Regular;22" EventFontMulti="Regular;22" progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" transparent="1" zPosition="2" />
+    <widget source="ServiceEvent" render="Label" position="367,5" size="614,31" font="Regular; 26" halign="left" backgroundColor="skyblue" transparent="1" foregroundColor="white">
+      <convert type="ServiceName">Name</convert>
     </widget>
-    <widget pixmap="SkyQ/icons/ico_txt_on.png" position="1171,90" size="20,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">SubtitlesAvailable</convert>
-      <convert type="ConditionalShowHide" />
+    <ePixmap name="Multi" position="0,0" size="1294,721" pixmap="SkyQ/Backgrounds/full.png" zPosition="-25" />
+    <widget source="ServiceEvent" render="Label" position="367,36" size="614,31" font="Regular; 24" halign="left" backgroundColor="skyblue" transparent="1" foregroundColor="white">
+      <convert type="EventName">Name</convert>
     </widget>
-    <widget pixmap="SkyQ/icons/ico_hd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsHD</convert>
-      <convert type="ConditionalShowHide" />
+    <widget source="Event" render="Label" position="1015,113" size="224,26" halign="left" valign="center" foregroundColor="white" backgroundColor="skyblue" font="Regular;23" transparent="1" zPosition="3">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="SkyClockToText">SkyQStartTime</convert>
+  </widget>
+   <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=3000,wrap" position="367,67" size="614,110" font="Regular; 22" halign="left" backgroundColor="skyblue" transparent="1" foregroundColor="white" valign="top">
+      <convert type="SkyEventName">ExtendedDescription</convert>
     </widget>
-    <widget pixmap="SkyQ/icons/ico_sd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsHD</convert>
-      <convert type="ConditionalShowHide">Invert</convert>
+    <ePixmap pixmap="SkyQ/icons/red.png" position="335,678" size="24,24" alphatest="blend" />
+    <ePixmap pixmap="SkyQ/icons/green.png" position="508,678" size="24,24" alphatest="blend" />
+    <ePixmap pixmap="SkyQ/icons/yellow.png" position="740,678" size="24,24" alphatest="blend" />
+    <ePixmap pixmap="SkyQ/icons/blue.png" position="973,678" size="24,24" alphatest="blend" />
+    <widget name="key_red" position="362,675" size="138,30" zPosition="1" font="Regular; 24" halign="left" foregroundColor="un5884ab" backgroundColor="skybluedark" transparent="1" />
+    <widget name="key_green" position="536,675" size="200,30" zPosition="1" font="Regular; 24" halign="left" foregroundColor="un5884ab" backgroundColor="skybluedark" transparent="1" />
+    <widget name="key_yellow" position="768,675" size="200,30" zPosition="1" font="Regular; 24" halign="left" foregroundColor="un5884ab" backgroundColor="skybluedark" transparent="1" />
+    <widget name="key_blue" position="1001,675" size="200,30" zPosition="1" font="Regular; 24" halign="left" foregroundColor="un5884ab" backgroundColor="skybluedark" transparent="1" />
+    <ePixmap position="1223,678" size="50,24" pixmap="SkyQ/icons/key_menu.png" alphatest="blend" />
+    <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=left,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="847,183" size="416,25" font="Regular; 22" zPosition="5" noWrap="1" transparent="1" backgroundColor="background" foregroundColor="skyyellow">
+      <convert type="d2NextEvents">Event1,noDuration</convert>
     </widget>
+    <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=left,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="847,391" size="416,25" font="Regular; 22" zPosition="5" noWrap="1" transparent="1" backgroundColor="background" foregroundColor="skyyellow">
+      <convert type="d2NextEvents">Event2,noDuration</convert>
+    </widget>
+    <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=left,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="847,599" size="416,25" font="Regular; 22" zPosition="5" noWrap="1" transparent="1" backgroundColor="background" foregroundColor="skyyellow">
+      <convert type="d2NextEvents">Event3,noDuration</convert>
+    </widget>
+    <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=left,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="847,635" size="416,25" font="Regular; 22" zPosition="5" noWrap="1" transparent="1" backgroundColor="background">
+      <convert type="d2NextEvents">PrimeTime,noDuration</convert>
+    </widget>
+    <widget backgroundColor="bluekey" font="Regular; 25" halign="center" position="44,670" render="Label" size="222,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="white">
+      <convert type="SkyClockToText">SkyQDate</convert>
+    </widget>
+    <widget source="session.VideoPicture" render="Pig" position="0,271" size="319,180" zPosition="3" backgroundColor="transparent" />
+    <widget source="Title" render="SkyRunningText" options="movetype=running,startpoint=0,direction=right,steptime=80,repeat=0,always=0,oneshot=0,startdelay=1000,wrap" position="-10,228" size="318,36" zPosition="3" font="Bold; 26" backgroundColor="skyblue" halign="right" transparent="1" foregroundColor="white" />
+    <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=3000,wrap" position="847,219" size="416,160" font="Regular; 20" backgroundColor="bluekey" foregroundColor="white" transparent="1" valign="top" zPosition="2">
+      <convert type="SkyEventName">NextDescription</convert>
+    </widget>
+    <widget source="ServiceEvent" render="SkyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=3000,wrap" position="847,427" size="416,160" font="Regular; 20" backgroundColor="bluekey" foregroundColor="white" transparent="1" zPosition="6" valign="top">
+      <convert type="SkyEventName">ThirdDescription</convert>
+    </widget>
+    <ePixmap pixmap="SkyQ/Backgrounds/cs-back1.png" position="839,214" size="435,173" alphatest="blend" />
+    <ePixmap name="line-v" position="1000,60" size="1,107" pixmap="SkyQ/Backgrounds/line-v.png" zPosition="5" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="SkyQ/Backgrounds/cs-back.png" position="329,177" size="510,490" alphatest="blend" />
+    <ePixmap pixmap="SkyQ/Backgrounds/cs-back1.png" position="839,422" size="435,173" alphatest="blend" />
+    <ePixmap pixmap="SkyQ/Backgrounds/csbar.png" position="839,386" size="435,36" alphatest="blend" />
+    <ePixmap pixmap="SkyQ/Backgrounds/csbar.png" position="839,178" size="435,36" alphatest="blend" />
+    <ePixmap pixmap="SkyQ/Backgrounds/csbar.png" position="839,594" size="434,36" alphatest="blend" />
+    <ePixmap pixmap="SkyQ/Backgrounds/csbar.png" position="839,630" size="434,37" alphatest="blend" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,210" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,240" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,270" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,300" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,330" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,360" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,390" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,420" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,450" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,480" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,510" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,540" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,570" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,600" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,630" size="493,2" />
+    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,660" size="493,2" />
+    <widget source="Service" render="Picon" position="1015,28" size="100,60" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="1">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="Event" render="Label" position="1015,86" size="224,26" halign="left" valign="center" foregroundColor="white" backgroundColor="skyblue" font="Regular;23" transparent="1" zPosition="3">
+    <convert type="EventTime">Duration</convert>
+    <convert type="SkyClockToText">SkyAsLength</convert>
+  </widget>
+    <widget pixmap="SkyQ/icons/ico_dolby_on.png" position="1194,90" size="30,25" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_format_on.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_format_off.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide">Invert</convert>
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_txt_on.png" position="1171,90" size="20,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_hd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_sd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide">Invert</convert>
+  </widget>
     <widget alphatest="blend" render="Pixmap" pixmap="SkyQ/icons/REC.png" position="1015,138" size="26,26" source="session.RecordState" zPosition="2">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
@@ -2650,84 +2654,84 @@
     <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="606,579" size="660,2" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelection" position="0,0" size="1280,720" title="Single EPG">
-    <ePixmap name="Multi" position="0,0" size="1280,720" pixmap="SkyQ/Backgrounds/full.png" zPosition="-25" />
-    <widget backgroundColor="un5884ab" font="Regular; 25" halign="center" position="42,670" render="Label" size="256,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="white">
-      <convert type="SkyClockToText">SkyQDate</convert>
-    </widget>
-    <widget source="session.VideoPicture" render="Pig" position="0,271" size="319,180" zPosition="3" backgroundColor="transparent" />
-    <widget name="list" position="337,185" size="931,390" itemHeight="30" selectionPixmap="SkyQ/SelectBars/epgselect.png" scrollbarMode="showNever" transparent="1" zPosition="2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/icons/red.png" position="337,680" size="24,24" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/icons/green.png" position="583,680" size="24,24" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/icons/yellow.png" position="829,680" size="24,24" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/icons/blue.png" position="1080,679" size="24,24" />
-    <widget backgroundColor="skybluedark" font="Regular; 24" halign="left" name="key_red" position="363,677" size="170,30" transparent="1" zPosition="1" foregroundColor="un5884ab" />
-    <widget backgroundColor="skybluedark" font="Regular; 24" halign="left" name="key_green" position="609,677" size="170,30" transparent="1" zPosition="1" foregroundColor="un5884ab" />
-    <widget backgroundColor="skybluedark" font="Regular; 24" halign="left" name="key_yellow" position="856,677" size="170,30" transparent="1" zPosition="1" foregroundColor="un5884ab" />
-    <widget backgroundColor="skybluedark" font="Regular; 24" halign="left" name="key_blue" position="1107,677" size="170,30" transparent="1" zPosition="1" foregroundColor="un5884ab" />
-    <ePixmap position="900,652" size="70,30" pixmap="SkyQ/icons/buttons/menu.png" alphatest="blend" />
-    <ePixmap name="line-v" position="1000,60" size="1,107" pixmap="SkyQ/Backgrounds/line-v.png" zPosition="5" transparent="1" alphatest="blend" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/epg-back.png" position="331,176" size="944,410" transparent="1" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,214" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,244" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,274" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,304" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,334" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,364" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,394" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,424" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,454" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,484" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,514" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,544" size="931,2" />
-    <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,574" size="931,2" />
-    <widget source="Event" render="Label" position="1015,86" size="224,26" halign="left" valign="center" foregroundColor="white" backgroundColor="skyblue" font="Regular;23" transparent="1" zPosition="3">
-      <convert type="EventTime">Duration</convert>
-      <convert type="SkyClockToText">SkyAsLength</convert>
-    </widget>
-    <widget source="Event" render="Label" position="1015,113" size="224,26" halign="left" valign="center" foregroundColor="white" backgroundColor="skyblue" font="Regular;23" transparent="1" zPosition="3">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="SkyClockToText">SkyQStartTime</convert>
-    </widget>
-    <widget source="Event" render="Label" position="367,28" size="614,33" halign="left" font="Regular; 30" foregroundColor="white" backgroundColor="skyblue" transparent="1">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="Event" render="SkyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=3000,wrap" position="367,60" size="614,115" font="Regular; 22" zPosition="3" foregroundColor="white" backgroundColor="skyblue" transparent="1" valign="top">
-      <convert type="EventName">ExtendedDescription</convert>
-    </widget>
-    <widget pixmap="SkyQ/icons/ico_dolby_on.png" position="1194,90" size="30,25" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsMultichannel</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget pixmap="SkyQ/icons/ico_format_on.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget pixmap="SkyQ/icons/ico_format_off.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide">Invert</convert>
-    </widget>
-    <widget pixmap="SkyQ/icons/ico_txt_on.png" position="1171,90" size="20,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">SubtitlesAvailable</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget pixmap="SkyQ/icons/ico_hd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsHD</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget pixmap="SkyQ/icons/ico_sd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">IsHD</convert>
-      <convert type="ConditionalShowHide">Invert</convert>
-    </widget>
-    <widget source="Service" render="Picon" position="1015,28" size="100,60" alphatest="blend" backgroundColor="transparent" transparent="0" zPosition="1">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget alphatest="blend" render="Pixmap" pixmap="SkyQ/icons/REC.png" position="1015,138" size="26,26" source="session.RecordState" zPosition="2">
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-    <widget source="Title" render="Label" position="12,228" size="296,36" zPosition="3" font="Bold; 26" backgroundColor="bluekey" halign="right" transparent="1" foregroundColor="white" />
-    <eLabel name="new eLabel" position="27,68" size="274,59" backgroundColor="skyblue" foregroundColor="white" text="TV Guide" font="Regular; 45" transparent="1" halign="right" />
-    <eLabel name="new eLabel" position="29,70" size="274,59" backgroundColor="skyblue" foregroundColor="un444444" text="TV Guide" font="Regular; 45" transparent="1" halign="right" zPosition="-1" />
-  </screen>
+  <ePixmap name="Multi" position="0,0" size="1280,720" pixmap="SkyQ/Backgrounds/full.png" zPosition="-25" />
+  <widget backgroundColor="un5884ab" font="Regular; 25" halign="center" position="42,670" render="Label" size="256,28" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" foregroundColor="white">
+    <convert type="SkyClockToText">SkyQDate</convert>
+  </widget>
+  <widget source="session.VideoPicture" render="Pig" position="0,271" size="319,180" zPosition="3" backgroundColor="transparent" />
+  <widget name="list" position="337,185" size="931,390" itemHeight="30" selectionPixmap="SkyQ/SelectBars/epgselect.png" scrollbarMode="showNever" transparent="1" zPosition="2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/icons/red.png" position="337,680" size="24,24" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/icons/green.png" position="583,680" size="24,24" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/icons/yellow.png" position="829,680" size="24,24" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/icons/blue.png" position="1080,679" size="24,24" />
+  <widget backgroundColor="skybluedark" font="Regular; 24" halign="left" name="key_red" position="363,677" size="170,30" transparent="1" zPosition="1" foregroundColor="un5884ab" />
+  <widget backgroundColor="skybluedark" font="Regular; 24" halign="left" name="key_green" position="609,677" size="170,30" transparent="1" zPosition="1" foregroundColor="un5884ab" />
+  <widget backgroundColor="skybluedark" font="Regular; 24" halign="left" name="key_yellow" position="856,677" size="170,30" transparent="1" zPosition="1" foregroundColor="un5884ab" />
+  <widget backgroundColor="skybluedark" font="Regular; 24" halign="left" name="key_blue" position="1107,677" size="170,30" transparent="1" zPosition="1" foregroundColor="un5884ab" />
+  <ePixmap position="900,652" size="70,30" pixmap="SkyQ/icons/buttons/menu.png" alphatest="blend" />
+  <ePixmap name="line-v" position="1000,60" size="1,107" pixmap="SkyQ/Backgrounds/line-v.png" zPosition="5" transparent="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/epg-back.png" position="331,176" size="944,410" transparent="1" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,214" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,244" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,274" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,304" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,334" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,364" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,394" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,424" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,454" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,484" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,514" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,544" size="931,2" />
+  <ePixmap alphatest="blend" pixmap="SkyQ/Backgrounds/div-h.png" position="337,574" size="931,2" />
+  <widget source="Event" render="Label" position="1015,86" size="224,26" halign="left" valign="center" foregroundColor="white" backgroundColor="skyblue" font="Regular;23" transparent="1" zPosition="3">
+    <convert type="EventTime">Duration</convert>
+    <convert type="SkyClockToText">SkyAsLength</convert>
+  </widget>
+  <widget source="Event" render="Label" position="1015,113" size="224,26" halign="left" valign="center" foregroundColor="white" backgroundColor="skyblue" font="Regular;23" transparent="1" zPosition="3">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="SkyClockToText">SkyQStartTime</convert>
+  </widget>
+  <widget source="Event" render="Label" position="367,28" size="614,33" halign="left" font="Regular; 30" foregroundColor="white" backgroundColor="skyblue" transparent="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="Event" render="SkyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=3000,wrap" position="367,60" size="614,115" font="Regular; 22" zPosition="3" foregroundColor="white" backgroundColor="skyblue" transparent="1" valign="top">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_dolby_on.png" position="1194,90" size="30,25" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_format_on.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_format_off.png" position="1138,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide">Invert</convert>
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_txt_on.png" position="1171,90" size="20,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_hd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="SkyQ/icons/ico_sd_on.png" position="1105,90" size="30,20" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide">Invert</convert>
+  </widget>
+  <widget source="Service" render="Picon" position="1015,28" size="100,60" alphatest="blend" backgroundColor="transparent" transparent="0" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget alphatest="blend" render="Pixmap" pixmap="SkyQ/icons/REC.png" position="1015,138" size="26,26" source="session.RecordState" zPosition="2">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget source="Title" render="Label" position="12,228" size="296,36" zPosition="3" font="Bold; 26" backgroundColor="bluekey" halign="right" transparent="1" foregroundColor="white" />
+  <eLabel name="new eLabel" position="27,68" size="274,59" backgroundColor="skyblue" foregroundColor="white" text="TV Guide" font="Regular; 45" transparent="1" halign="right" />
+  <eLabel name="new eLabel" position="29,70" size="274,59" backgroundColor="skyblue" foregroundColor="un444444" text="TV Guide" font="Regular; 45" transparent="1" halign="right" zPosition="-1" />
+</screen>
   <screen name="EventView" position="0, 0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="1">
     <ePixmap position="center,478" zPosition="-1" size="1092,215" pixmap="SkyQ/Backgrounds/event-infobar.png" alphatest="on" />
     <widget source="Title" render="Label" position="105,521" size="794,34" font="Bold; 25" valign="center" halign="left" noWrap="1" backgroundColor="skyblue" transparent="1" zPosition="1" />
